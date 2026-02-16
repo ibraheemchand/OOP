@@ -16,7 +16,7 @@ public:
 
             for (int j = 0; j < 12; j++)
             {
-                cout << "Enter Salary for Month "<< i+1 << endl;
+                cout << "Enter Salary for Month "<< (j+1) << endl;
                 cin >> e[i].salary[j];
             }
             
@@ -39,7 +39,7 @@ public:
 
 
 
-main (){
+int main(){
     int N;
     cout << "Tell No of students " << endl;
     cin >> N;
