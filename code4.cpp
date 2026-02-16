@@ -16,7 +16,7 @@ int main(){
     int N;
     cout << "Tell No of students " << endl;
     cin >> N;
-students abc[N];
+students* abc =new students[N];
 for (int i = 0; i < N; i++)
 {
     cout << "Enter Name "<< endl;
