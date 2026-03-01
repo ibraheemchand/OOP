@@ -1,8 +1,10 @@
 #include <iostream>
 #include "code4.h"
+
 using namespace std;
 int main(){
 
-    cout << "Hellow" << endl;
+    add(4,6);
+    
     return 0;
 }
