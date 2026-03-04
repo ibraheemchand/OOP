@@ -1,4 +1,8 @@
+#ifndef CGPA
+#define CGPA
+
 #include <string>
+
 #include <iostream>
 using namespace std;
 int x =2314;
@@ -30,3 +34,4 @@ students::~students()
 
 
 
+#endif
