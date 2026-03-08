@@ -5,7 +5,7 @@ using namespace std;
 
 class product
 {
-private:
+protected:
     int price;
     string color;
     string model;
