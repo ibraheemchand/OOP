@@ -1,4 +1,6 @@
 #include "product.hpp"
+#include <iostream>
+#include <fstream>
 using namespace std;
   
    void product:: set_price(int price){
@@ -44,4 +46,58 @@ using namespace std;
         
 
 
+    }
+
+    int product::get_price() const{
+        return price;
+    }
+    string product::get_color() const{
+        return color;
+    }
+    string product::get_model() const{
+        return model;
+    }
+    void product::get_specifications() const{
+        cout << " Specifications: " << endl;
+        for (int i = 0; i < 5; i++)
+        {
+            cout<<specification[i]<<endl;
+        }
+    }   
+
+
+    void product::saveToFile(ofstream& file) {
+        file << price << endl;
+        file << color << endl;
+        file << model << endl;
+        for (int i = 0; i < 5; i++) {
+            file << specification[i] << endl;
+        }
+    }
+    void product::inputBaseData() {
+        cout << "Enter price: ";
+        cin >> price;
+        cout << "Enter color: ";
+        cin >> color;
+        cout << "Enter model: ";
+        cin >> model;
+        cout << "Enter specifications (5): " << endl;
+        for (int i = 0; i < 5; i++) {
+            cout << "Specification " << (i + 1) << ": ";
+            cin >> specification[i];
+        }
+    }
+
+    void product::displayBaseData() const {
+        cout << "Price: " << price << endl;
+        cout << "Color: " << color << endl;
+        cout << "Model: " << model << endl;
+        get_specifications();
+    }
+    void product::displayDetails() const {
+        displayBaseData();
+    }
+
+    void product::inputData() {
+        inputBaseData();
     }

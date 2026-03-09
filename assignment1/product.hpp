@@ -1,6 +1,8 @@
-#ifndef task.hpp
-#define task.hpp
+#ifndef product_hpp
+#define product_hpp
+#include <iostream>
 #include <string>
+#include <fstream>
 using namespace std;
 
 class product
@@ -18,6 +20,25 @@ public:
     void set_color(string color);
     void set_model(string model);
     void set_specifications(string specification[5]);
+
+    int get_price() const;
+    string get_color() const;
+    string get_model() const;
+    void get_specifications() const;
+
+     void inputBaseData();
+     void displayBaseData() const;
+
+    static int getProductCount();
+    void showAnalysis(product** arr, int size);
+
+    virtual void displayDetails() const ;
+    virtual void inputData(); 
+
+    //File handling functions
+    void saveToFile(ofstream& file) ;
+
+
 };
 
 
