@@ -5,24 +5,23 @@ using namespace std;
 
 class lifo
 {
-private:
-    int n;
 public:
-    lifo(){
-        cout << "The constructor is called " ; 
+     int n;
+       lifo(int x){
+        n=x;
+        cout << "The constructor is called " <<n<< endl;; 
     };
     ~lifo(){
-        cout << "The distructor is called " ; 
+        cout << "The distructor is called " << n << endl;; 
     };
 };
 
-lifo::lifo(/* args */)
-{
+
+
+
+int main(){
+lifo m1(1);
+
+lifo m2(2);
+    return 0 ;
 }
-
-lifo::~lifo()
-{
-}
-
-
-int main
