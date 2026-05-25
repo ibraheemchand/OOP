@@ -4,11 +4,12 @@ using namespace std;
 
 int main(){
     fstream file;
-    file.open("/home/chand/Desktop/OOP1/sample.cpp" , ios :: out);
-
+    file.open("samplee.txt" , ios :: out);
+ char thi = 'A';
   if (file)
   {
-      file << "Hellow world";
+          file << (thi+0);
+
       cout << "Data written successfully " << endl;
   }
   
@@ -17,5 +18,10 @@ int main(){
     file.close();
 
     cout << "File closed" << endl;
+    int a;
+      file.open("samplee.txt" , ios :: in);
+      file>>a;
+      (char)a;
+      cout << "From the file "<<(char)a << endl;
     return 0 ;
 }
